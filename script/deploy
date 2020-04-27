@@ -7,7 +7,10 @@ ssh ubuntu@13.233.159.10 <<EOF
     nvm install v10.11.0    
     npm install    
     npm install -g nodemon 
-    npm install -g pm2    
+    npm install -g pm2  
+    pm2 delete all  
     pm2 start ecosystem.config.js
+    pm2 save
+    pm2 startup
     exit
 EOF
